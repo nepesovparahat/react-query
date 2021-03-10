@@ -18,9 +18,7 @@ body{
   text-decoration: none;
   outline: none;
   cursor: pointer;
-  box-shadow: none;
   text-shadow: none;
-  overflow: hidden;
   color: #fff;
   background-color: rgb(149, 211, 50);
 }
@@ -30,13 +28,18 @@ body{
 .App{
  margin: 0 auto;
 }
-h1{
-  
+.people-item,.planet-card{
+  width: 1000px;
+  background-color: rgb(231, 214, 168);
+  margin: 10px 0;
+  border-radius: 10px;
+  line-height: 10px;
+  padding: 10px 10px; 
 }
 .pln-div,.pepl-div{
   display: flex;
   flex: content;
-  justify-content: space-between;
+  justify-content:space-around;
 }
 
 

@@ -1,11 +1,12 @@
 import React from 'react';
 
-const People = () => {
+const People = ({person}) => {
     return (
-        <div className = "pepl-div">
-            <h2>People</h2>
+        <div className="people-item">
+            <h3>{ person.name }</h3>
+            <p>Gender - {person.gender} </p>
+            <p>Birth Year - {person.birth_year} </p>
         </div>
-      );
+    );
 }
- 
 export default People;

@@ -7,5 +7,4 @@ const Navbar = ({setPage}) => {
         </div>
       );
 }
- 
 export default Navbar;

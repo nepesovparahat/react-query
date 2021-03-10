@@ -1,24 +1,37 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {useQuery} from 'react-query';
-import { Getpost } from '../Query';
+import axios from 'axios';
+import Planet from './Planet';
+import { ReactQueryDevtools } from 'react-query-devtools';
 
-
-
+const axiosget = async () =>{
+    const res = await axios('http://swapi.dev/api/planets/');
+    return res.data;
+}
 const Planets = () => {
-    
-    const { data, isLoading } = useQuery('planets', Getpost)
-    console.log(data)
+ const {data,status} = useQuery('planets',axiosget);
+ console.log(data)
     return ( 
+       <>
         <div className="pln-div">
-            <h2>Planets</h2>
-            {/* {setplanet === 'loading' && (
-                <div>loading data...</div>
-            )}
-            {setplanet === 'error' && (
-                <div>Error data</div>
-            )} */}
+
+      {status === 'loading' && (
+        <div>Loading...</div>
+      )}
+
+      {status === 'error' && (
+        <div>Error fetching data</div>
+      )}
+
+      {status === 'success' && (
+        <div>
+             <h2>Planets</h2>
+          { data.results.map(planet => <Planet key={planet.name} planet={planet} /> ) }
         </div>
+      )} 
+    </div>
+    <ReactQueryDevtools initialIsOpen = { false }/>
+    </>
      );
 }
- 
 export default Planets;
