@@ -9,26 +9,34 @@ body{
 .nav-btn{
   width: 150px;
   height: 40px;
-  margin: 20px 30px 20px 30px;
+  margin: 20px 30px;
+  padding: 5px;
   border-radius: 12px;
   font-size: 24px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
   border:none;
   text-decoration: none;
-  outline: none;
   cursor: pointer;
   text-shadow: none;
+  text-align: center;
   color: #fff;
-  background-color: rgb(149, 211, 50);
+  background-color:#20b4bf;
+  background-image: linear-gradient(250deg, #20bf9d 0%, #01baef 74%);
+  
+  
 }
-.nav-btn:active{
-  box-shadow: 0 3px #666;
+.nav-btn:hover{
+  box-shadow:
+ 3px 1px 10px #CF77F3,
+   0px 1px 10px #009BFF,
+  -2px 1px 10px #2AC9DB;
+  background-image: linear-gradient(-10deg, #CF77F3 0%, #009BFF 47%, #2AC9DB 100%);
 }
 .App{
  margin: 0 auto;
 }
-.people-item,.planet-card{
+.people-item,.planet-item{
   width: 1000px;
   background-color: rgb(231, 214, 168);
   margin: 10px 0;
@@ -41,7 +49,48 @@ body{
   flex: content;
   justify-content:space-around;
 }
+.icon{
+  padding-right: 5px;
+  height: 14px;
+  width: 5px;
+}
+.pre{
+  white-space: nowrap;
+}
+.next,.previous{
+font-weight: bold;
+margin: 10px 20px;
+padding: 5px 10px 5px 10px;
+border:0;
+font-size: 100%;
+vertical-align: baseline;
+color: rgb(122, 118, 118);
+background-color: seashell;
+border-radius: 5px;
+border-color: seashell;
+}
 
-
-
-
+.previous:hover{
+  background-color:rgb(224, 214, 214);
+  cursor: pointer;
+}
+.next:hover{
+  background-color:rgb(224, 214, 214);
+  cursor: pointer; 
+}
+.nmb_btn{
+font-weight: bold;
+margin: 0 5px 0 0;
+padding: 5px 5px;
+min-width: 1.8rem;
+border:0;
+font-size: 20px;
+color: rgb(122, 118, 118);
+background-color: seashell;
+border-radius:50%;
+border-color: black;
+}
+.nmb_btn:focus{
+  background-color: rgb(70, 65, 65);
+  color: #fff;
+}
