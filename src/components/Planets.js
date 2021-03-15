@@ -29,16 +29,17 @@ const Planets = () => {
             <h2>Planets</h2>
           { resolvedData.results.map(planet => <Planet key={planet.name} planet={planet} /> ) }
         </div> 
-        <div className="nextpage">
+        </> 
+      )} 
+    </div>
+
+    <div className="nextpage">
     <button className="previous" onClick = {()=> setnextPage(old => Math.max(old-1, 1))}>⟪ Previous</button>
     <button className="nmb_btn" onClick = {()=> setnextPage(1)}>1</button>
     <button className="nmb_btn" onClick = {()=> setnextPage(2)}>2</button>
     <button className="nmb_btn" onClick = {()=> setnextPage(3)}>3</button>
     <button className="next" onClick = {()=> setnextPage(old => (!latestData || !latestData.next ? old :old + 1))}>Next ⟫</button>
     </div>  
-        </> 
-      )} 
-    </div>
     <ReactQueryDevtools initialIsOpen = { false }/>
     </>
      );
