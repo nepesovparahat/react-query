@@ -6,7 +6,7 @@ import { ReactQueryDevtools } from "react-query-devtools";
 import Loader from "react-loader-spinner";
 
 const axiosget = async (key, next) => {
-  const res = await axios(`http://swapi.dev/api/planets/?page=${next}`);
+  const res = await axios(`https://swapi.dev/api/planets/?page=${next}`);
   return res.data;
 };
 
