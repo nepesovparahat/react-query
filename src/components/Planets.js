@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { usePaginatedQuery } from "react-query";
 import axios from "axios";
 import Planet from "./Planet";

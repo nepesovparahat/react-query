@@ -6,6 +6,11 @@ body {
 .content-div {
   text-align: justify;
 }
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #711ae2;
+}
 .nav-btn {
   width: 150px;
   height: 40px;
