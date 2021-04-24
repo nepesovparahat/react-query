@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { usePaginatedQuery } from "react-query";
 import axios from "axios";
-import People from "./People";
+import Person from "./Person";
 import { ReactQueryDevtools } from "react-query-devtools";
 import Loader from "react-loader-spinner";
 
@@ -10,10 +10,10 @@ const getaxios = async (key, next) => {
   return res.data;
 };
 
-const Peoples = () => {
+const Persons = () => {
   const [nextpage, setNextPage] = useState(1);
   const { resolvedData, latestData, status } = usePaginatedQuery(
-    ["people", nextpage],
+    ["person", nextpage],
     getaxios,
     {
       staleTime: 0,
@@ -37,9 +37,9 @@ const Peoples = () => {
         {status === "success" && (
           <>
             <div>
-              <h2>Peoples</h2>
+              <h2>Persons</h2>
               {resolvedData.results.map((person) => (
-                <People key={person.name} person={person} />
+                <Person key={person.name} person={person} />
               ))}
               <div className="nextpage">
                 <button
@@ -71,4 +71,4 @@ const Peoples = () => {
   );
 };
 
-export default Peoples;
+export default Persons;

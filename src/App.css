@@ -6,10 +6,25 @@ body {
 .content-div {
   text-align: justify;
 }
+.title{
+  display: flex;
+  flex:content;
+  justify-content: center;
+  text-align: center;
+}
 h1 {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #711ae2;
+  box-shadow: 3px 1px 10px #cf77f3, 0px 1px 10px #009bff, -2px 1px 10px #2ac9db;
+  background-image: linear-gradient(
+    -10deg,
+    #d4ace4 3%,
+    #44b4ff 47%,
+    #05e6ff 100%
+  );
+  width: 300px;
+  border-radius: 7px;
 }
 .nav-btn {
   width: 150px;
@@ -45,7 +60,7 @@ h1 {
   margin: 0 auto;
 }
 
-.people-item,
+.person-item,
 .planet-item {
   width: 1000px;
   background-color: rgb(231, 214, 168);
@@ -81,14 +96,15 @@ h1 {
   border-radius: 5px;
   border-color: seashell;
 }
-
 .previous:hover {
-  background-color: rgb(224, 214, 214);
+  background-color: rgb(13, 149, 228);
+  color: white;
   cursor: pointer;
 }
 
 .next:hover {
-  background-color: rgb(224, 214, 214);
+  background-color: rgb(13, 149, 228);
+  color: white;
   cursor: pointer;
 }
 
@@ -108,6 +124,7 @@ h1 {
 .nextpage {
   margin-left: 0;
   padding-left: 0;
+  text-align: center;
 }
 
 .previous:disabled,

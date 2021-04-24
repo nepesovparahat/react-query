@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
-import Peoples from "./components/Peoples";
+import Peoples from "./components/Persons";
 import Planets from "./components/Planets";
 import "./App.css";
 import { useTransition, animated, config } from "@react-spring/web";
@@ -20,14 +20,14 @@ const App = () => {
 
   return (
     <div className="App">
-      {transitions(
+      <div className="title">{transitions(
         (styles, item) =>
           item && (
             <animated.div style={styles}>
               <h1>Star Wars</h1>
             </animated.div>
           )
-      )}
+      )}</div>
       <Navbar setPage={setPage} />
       <div className="content-div">
         {page === "planets" ? <Planets /> : <Peoples />}

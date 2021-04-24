@@ -2,7 +2,7 @@
 
 This application lists the API data with React's hook library, react query.
 
-> ### Project Link: [Reac Query](https://relaxed-franklin-2cf855.netlify.app)
+> ### Project Link: [React Query](https://relaxed-franklin-2cf855.netlify.app)
 
 ---
 

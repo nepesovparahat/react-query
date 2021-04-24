@@ -6,8 +6,8 @@ const Navbar = ({ setPage }) => {
       <button onClick={() => setPage("planets")} className="nav-btn">
         Planets
       </button>
-      <button onClick={() => setPage("people")} className="nav-btn">
-        People
+      <button onClick={() => setPage("pereson")} className="nav-btn">
+        Persons
       </button>
     </div>
   );

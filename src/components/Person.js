@@ -1,8 +1,8 @@
 import React from "react";
 
-const People = ({ person }) => {
+const Person = ({ person }) => {
   return (
-    <div className="people-item">
+    <div className="person-item">
       <h3>{person.name}</h3>
       <p>Gender - {person.gender} </p>
       <p>Birth Year - {person.birth_year} </p>
@@ -10,4 +10,4 @@ const People = ({ person }) => {
   );
 };
 
-export default People;
+export default Person;
